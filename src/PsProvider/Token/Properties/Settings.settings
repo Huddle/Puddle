@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Token.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RedirectUri" Type="System.String" Scope="User">
+      <Value Profile="(Default)">urn:ietf:wg:oauth:2.0:oob</Value>
+    </Setting>
+    <Setting Name="ClientId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FileAdminProjectHuddleOob</Value>
+    </Setting>
+    <Setting Name="HuddleAuthServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://login.huddle.dev/</Value>
+    </Setting>
+    <Setting Name="HuddleApiServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://api.huddle.dev/</Value>
+    </Setting>
+    <Setting Name="HuddleRequestEndPoint" Type="System.String" Scope="User">
+      <Value Profile="(Default)">request/</Value>
+    </Setting>
+    <Setting Name="HuddleRefreshEndPoint" Type="System.String" Scope="User">
+      <Value Profile="(Default)">token/</Value>
+    </Setting>
+    <Setting Name="HuddleTokenEndPoint" Type="System.String" Scope="User">
+      <Value Profile="(Default)">token/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
