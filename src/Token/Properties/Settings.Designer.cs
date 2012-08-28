@@ -13,7 +13,7 @@ namespace Token.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "10.0.0.0")]
-    public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
         
@@ -25,7 +25,7 @@ namespace Token.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("urn:ietf:wg:oauth:2.0:oob")]
+        [global::System.Configuration.DefaultSettingValueAttribute("RedirectUri")]
         public string RedirectUri {
             get {
                 return ((string)(this["RedirectUri"]));
@@ -37,7 +37,7 @@ namespace Token.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("FileAdminProjectHuddleOob")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ClientId")]
         public string ClientId {
             get {
                 return ((string)(this["ClientId"]));
@@ -49,7 +49,7 @@ namespace Token.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://login.huddle.dev/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("AuthServer")]
         public string HuddleAuthServer {
             get {
                 return ((string)(this["HuddleAuthServer"]));
@@ -61,7 +61,7 @@ namespace Token.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://api.huddle.dev/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ApiServer")]
         public string HuddleApiServer {
             get {
                 return ((string)(this["HuddleApiServer"]));

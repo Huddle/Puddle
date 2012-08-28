@@ -3,16 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="RedirectUri" Type="System.String" Scope="User">
-      <Value Profile="(Default)">urn:ietf:wg:oauth:2.0:oob</Value>
+      <Value Profile="(Default)">RedirectUri</Value>
     </Setting>
     <Setting Name="ClientId" Type="System.String" Scope="User">
-      <Value Profile="(Default)">FileAdminProjectHuddleOob</Value>
+      <Value Profile="(Default)">ClientId</Value>
     </Setting>
     <Setting Name="HuddleAuthServer" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://login.huddle.dev/</Value>
+      <Value Profile="(Default)">AuthServer</Value>
     </Setting>
     <Setting Name="HuddleApiServer" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://api.huddle.dev/</Value>
+      <Value Profile="(Default)">ApiServer</Value>
     </Setting>
     <Setting Name="HuddleRequestEndPoint" Type="System.String" Scope="User">
       <Value Profile="(Default)">request/</Value>

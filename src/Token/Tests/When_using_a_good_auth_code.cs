@@ -17,7 +17,7 @@ namespace IsolatedStorage.Tests
                                  {
                                      authcode = new GetAuthCode();
 
-                                     request = new AuthorizationCodeTokenRequest(Settings.Default.ClientId, "5522f8ca-8c59-414f-9ffd-49313aa70a7c", Settings.Default.RedirectUri);
+                                     request = new AuthorizationCodeTokenRequest(Settings.Default.ClientId, "nooooooooooo", Settings.Default.RedirectUri);
                                      client = new TokenClient();
                                  };
 
