@@ -1,0 +1,15 @@
+﻿Installing assembly 'D:\Dev\git\Puddle\src\Provider\bin\Release\Provider.dll'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Dev\git\Puddle\src\Provider\bin\Release\Provider.InstallLog
+   assemblypath = D:\Dev\git\Puddle\src\Provider\bin\Release\Provider.dll
+Committing assembly 'D:\Dev\git\Puddle\src\Provider\bin\Release\Provider.dll'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Dev\git\Puddle\src\Provider\bin\Release\Provider.InstallLog
+   assemblypath = D:\Dev\git\Puddle\src\Provider\bin\Release\Provider.dll
+Uninstalling assembly 'D:\Dev\git\Puddle\src\Provider\bin\Release\Provider.dll'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Dev\git\Puddle\src\Provider\bin\Release\Provider.InstallLog
+   assemblypath = D:\Dev\git\Puddle\src\Provider\bin\Release\Provider.dll
