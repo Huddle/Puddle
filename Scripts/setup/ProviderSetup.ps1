@@ -8,14 +8,14 @@ $path = $PsHome
 
 #first lets move the module to the powershell folder
 cd $path\Modules\
-MD Provider
+MD 	PsHuddle
 
 $currentpath = Split-Path $MyInvocation.MyCommand.Path
 
-copy-Item  "$currentpath\Provider\*" $path\Modules\Provider\ 
+copy-Item  "$currentpath\Provider\*" $path\Modules\PsHuddle\ 
 
 #now its time to register that blasted .dll
-Invoke-Expression "$(Get-FrameworkDirectory)installutil $path\Modules\Provider\Provider.dll"
+Invoke-Expression "$(Get-FrameworkDirectory)installutil $path\Modules\Provider\PsHuddle.dll"
 
 #finally check if they are on .net 4
 if([System.Environment]::Version.Major -lt 4)
