@@ -72,6 +72,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SettingsManager.cs" />
     <Compile Include="Tests\when_Access_Token_Is_Read_From_File.cs" />
     <Compile Include="Tests\when_Access_Token_Is_Saved_To_File.cs" />
     <Compile Include="Tests\when_Encrypting_Access_Token.cs" />

@@ -3,6 +3,7 @@ using System.IO;
 using System.Management.Automation;
 using System.Text;
 using Newtonsoft.Json;
+using Token;
 using Token.OAuth2;
 using Token.Properties;
 using TokenTest.oAuth2;
@@ -100,12 +101,12 @@ namespace Provider
             if (_clientSecret == null)
             {
 
-                var request = new AuthorizationCodeTokenRequest(_clientId, Code.GetCode(_clientId), Settings.Default.RedirectUri);
+                var request = new AuthorizationCodeTokenRequest(_clientId, Code.GetCode(_clientId), SettingsManager.RedirectUri);
                 token = Client.GetToken(request);
             }
             else
             {
-                var request = new AuthorizationCodeTokenRequestWithSecretKey(_clientId, Code.GetCode(_clientId), Settings.Default.RedirectUri, _clientSecret);
+                var request = new AuthorizationCodeTokenRequestWithSecretKey(_clientId, Code.GetCode(_clientId), SettingsManager.RedirectUri, _clientSecret);
                 token = Client.GetToken(request);
             }
 
