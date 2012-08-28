@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Provider", "src\Provider\Provider.csproj", "{781BEDBA-2292-425A-A7A8-52413D3D37CC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Token", "src\Token\Token.csproj", "{8E884488-CD16-476C-9D11-16165564DD85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsHuddle", "src\PsProvider\PsHuddle.csproj", "{781BEDBA-2292-425A-A7A8-52413D3D37CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{781BEDBA-2292-425A-A7A8-52413D3D37CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{781BEDBA-2292-425A-A7A8-52413D3D37CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{781BEDBA-2292-425A-A7A8-52413D3D37CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{781BEDBA-2292-425A-A7A8-52413D3D37CC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8E884488-CD16-476C-9D11-16165564DD85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8E884488-CD16-476C-9D11-16165564DD85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E884488-CD16-476C-9D11-16165564DD85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E884488-CD16-476C-9D11-16165564DD85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{781BEDBA-2292-425A-A7A8-52413D3D37CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{781BEDBA-2292-425A-A7A8-52413D3D37CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{781BEDBA-2292-425A-A7A8-52413D3D37CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{781BEDBA-2292-425A-A7A8-52413D3D37CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
