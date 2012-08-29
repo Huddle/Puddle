@@ -16,9 +16,9 @@ using Token.OAuth2;
  * therefore I have disabled thrown messages with xmlException and invalidOperation
  * TURN THESE BACK ON IF YOU NEED THEM but be prepared to mash f5 10 times or so 
  */
-namespace Provider
+namespace PSHuddle
 {
-    [CmdletProvider("Provider", ProviderCapabilities.ShouldProcess | ProviderCapabilities.Filter)]
+    [CmdletProvider("PsHuddle", ProviderCapabilities.ShouldProcess | ProviderCapabilities.Filter)]
     public class Provider : NavigationCmdletProvider
     {
         private const string AcceptHeader = "application/vnd.huddle.data+xml";

@@ -13,12 +13,12 @@ namespace Puddle
 
         public override string Name
         {
-            get { return "Provider"; }
+            get { return "PsHuddle"; }
         }
 
         public override string Vendor
         {
-            get { return "huddle"; }
+            get { return "Huddle"; }
         }
     }
 }
