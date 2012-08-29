@@ -14,7 +14,7 @@
 * get-childitem
 * new-item
 * remove-item
-*set-item
+* set-item
 
 ####Cmdlets for:
 * setting a auth token --> set-token -clientId foo
