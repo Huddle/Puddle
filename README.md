@@ -5,7 +5,7 @@
 
 ### Installation
 - Pull the source (just Scripts directory needed for existing Binary)
-- Run setup.ps1 in the scripts folder 
+- Run /scripts/ProviderSetup.ps1 in the scripts folder 
 
 ### Example use
 

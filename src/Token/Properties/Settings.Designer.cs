@@ -25,7 +25,7 @@ namespace Token.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("RedirectUri")]
+        [global::System.Configuration.DefaultSettingValueAttribute("urn:ietf:wg:oauth:2.0:oob")]
         public string RedirectUri {
             get {
                 return ((string)(this["RedirectUri"]));
@@ -37,7 +37,7 @@ namespace Token.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ClientId")]
+        [global::System.Configuration.DefaultSettingValueAttribute("FileAdminProjectHuddleOob")]
         public string ClientId {
             get {
                 return ((string)(this["ClientId"]));
@@ -49,7 +49,7 @@ namespace Token.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("AuthServer")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://login.huddle.dev/")]
         public string HuddleAuthServer {
             get {
                 return ((string)(this["HuddleAuthServer"]));
@@ -61,7 +61,7 @@ namespace Token.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ApiServer")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://api.huddle.dev/")]
         public string HuddleApiServer {
             get {
                 return ((string)(this["HuddleApiServer"]));
