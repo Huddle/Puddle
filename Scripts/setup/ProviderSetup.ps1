@@ -8,7 +8,11 @@ $path = $PsHome
 
 #first lets move the module to the powershell folder
 cd $path\Modules\
-MD 	PsHuddle
+
+if(!(Test-Path $path\Modules\PsHuddle))
+{
+	MD 	PsHuddle
+}
 
 $currentpath = Split-Path $MyInvocation.MyCommand.Path
 
@@ -27,8 +31,8 @@ $configExists = Test-Path $configFile
 
 if($configExists)
 {
-	Write-Host You already have a config file please manually edit this file so it can run .net 4.0 files
-	Write-Host http://stackoverflow.com/questions/2094694/how-can-i-run-powershell-with-the-net-4-runtime
+	Write-Host You already have a config file please manually edit this file so it can run .net 4.0 files -foregroundcolor "yellow"
+	Write-Host http://stackoverflow.com/questions/2094694/how-can-i-run-powershell-with-the-net-4-runtime -foregroundcolor "yellow"
 }
 else
 {
