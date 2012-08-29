@@ -3,27 +3,37 @@
 ## A Powershell provider for Huddle
 
 
-In order for this provider to work run the setup.ps1 in the scripts folder this will take care of putting the formatter in the right place setting up powershell to work with .net 4.0 etc
-
 ### Installation
 - Pull the source (just Scripts directory needed for existing Binary)
-- Run setup.exe (or scripts)
+- Run setup.ps1 in the scripts folder 
 
 ### Example use
 
+####supports powershell syntax for:
+* get-item
+* get-childitem
+* new-item
+* remove-item
+*set-item
 
-#### Developer Notes
+####Cmdlets for:
+*setting a auth token --> set-token -clientId foo
+*Undoing a deleted folder or file --> undo-delete -path foo
+*creating a blank item --> new-item -title foo -desc bar
+*pointing to a path for upload --> new-fileLocation -path foo
 
-When you run the provider for the first time you'll get an error as you have never set a token before so run the following command:
-set-token -clientId "clientId Here" you should only need to do this once as the provider will automatically refresh the token as it expires. This provider also supports getting a token with the password type authentication but please use this only as a last resort.
+### Developer Notes
 
-An example of how to hit your entry page of your account can be seen in the scripts folder.
+*On first running of the project you will be prompted to log in to huddle so it can set a token. 
 
-Currently the provider supports the following commands : set-item, get-item, get-childitem, new-item, remove-item. The provider does not support tab completion.
+*Your Token is stored in your %appdata% (don't worry its encrypted).
 
-The provider has the following cmdlets with it set-token, UndoDelete (will restore a deleted folder or document), new-object (used for set-item and get-item), new-FileLocation (used to specifiy the path of the file you wish to upload to the huddle).
+*You will need to modify the config file in the token project to get the source working as I have removed
+oauth details such as the projects clientId or redirectURI.
 
-uploading files is currently a two step process 1. create the new blank file 2. set-item with the path of the item you wish to upload (to create this upload object use the newFileLocation cmdlet).
+*To Upload a file from your computer to huddle is a two step apporach 1. create a blank file with new-item then
+call set-item with the value of new-fileLocation object.
+
 
 
 
