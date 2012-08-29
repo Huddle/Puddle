@@ -1,6 +1,19 @@
+# PS.Huddle
+
+## A Powershell provider for Huddle
+
+
 In order for this provider to work run the setup.ps1 in the scripts folder this will take care of putting the formatter in the right place setting up powershell to work with .net 4.0 etc
 
-----When Running The Provider----
+### Installation
+- Pull the source (just Scripts directory needed for existing Binary)
+- Run setup.exe (or scripts)
+
+### Example use
+
+
+#### Developer Notes
+
 When you run the provider for the first time you'll get an error as you have never set a token before so run the following command:
 set-token -clientId "clientId Here" you should only need to do this once as the provider will automatically refresh the token as it expires. This provider also supports getting a token with the password type authentication but please use this only as a last resort.
 

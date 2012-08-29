@@ -64,10 +64,7 @@ namespace Provider
             var xmlBody = "";
 
             var getPath = new ResourceFinder(path, _token, AcceptHeader);
-                //we want to get the uri of the match folder they specififed
-            var pathItem = _responseItemFactory.Create(getPath.Get());
-                //we do this to get the folders create-document and create-folder links
-
+            var pathItem = _responseItemFactory.Create(getPath.Get()); //we do this to get the folders create-links
 
             if (itemTypeName == "folder")
             {
