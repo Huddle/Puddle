@@ -4,7 +4,6 @@ using System.Web;
 using System.Web.Caching;
 using DynamicRest;
 using DynamicRest.Fluent;
-using Provider.Entity.Entities;
 using Token.OAuth2;
 using TokenTest.oAuth2;
 
@@ -33,8 +32,9 @@ namespace Provider.Resource
             var restClientBuilder = new RestClientBuilder()
                 .WithUri(_pathManager.CreatePath())
                 .WithOAuth2Token(_token.GetAccessToken())
-                .WithAcceptHeader(_acceptHeader);
-            var response = restClientBuilder.Build().Get();
+                .WithAcceptHeader(_acceptHeader)
+                .Build();
+            var response = restClientBuilder.Get();
 
             if (!String.IsNullOrEmpty(response.GetResponseHeader(HttpResponseHeader.Location)))
             {

@@ -1,7 +1,6 @@
 ﻿using System.Management.Automation;
-using Provider.Entity;
-using Provider.Entity.Entities;
 using Provider.Resource;
+using PsHuddle.Entity;
 using Token.OAuth2;
 
 namespace Provider

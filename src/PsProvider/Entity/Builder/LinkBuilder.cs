@@ -1,13 +1,16 @@
 ﻿using System.Collections.Generic;
-using Provider.Entity.Entities;
+using PsHuddle.Entity.Entities;
 
-namespace Provider.Entity.Builder
+namespace PsHuddle.Entity.Builder
 {
     class LinkBuilder
     {
         public static Links Build(dynamic response)
         {
             var listLinks = new List<Link>();
+
+            var responseLinks = response.link;
+
             foreach (dynamic li in response.link)
             {
                 listLinks.Add(new Link(li.rel, li.href));

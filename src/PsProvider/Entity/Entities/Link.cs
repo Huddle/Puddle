@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Provider.Entity.Entities
+namespace PsHuddle.Entity.Entities
 {
     public class Link
     {

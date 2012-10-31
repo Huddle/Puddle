@@ -5,8 +5,8 @@ using System.Web;
 using System.Web.Caching;
 using DynamicRest;
 using DynamicRest.Fluent;
-using Provider.Entity.Builder;
-using Provider.Entity.Entities;
+using PsHuddle.Entity.Builder;
+using PsHuddle.Entity.Entities;
 using Token.OAuth2;
 using TokenTest.oAuth2;
 

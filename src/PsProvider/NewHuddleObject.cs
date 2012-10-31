@@ -1,20 +1,13 @@
 ﻿using System.Management.Automation;
-using Provider.Entity.Entities;
+using PsHuddle.Entity.Entities;
 
 namespace Provider
 {
-    [Cmdlet("New", "object")]
-    public class SetObject : PSCmdlet
+    [Cmdlet("New", "HuddleObject")]
+    public class NewHuddleObject : PSCmdlet
     {
         private string _title;
         private string _desc;
-
-        #region Parameters
-
-        /// <summary>
-        /// The names of the processes retrieved by the cmdlet.
-        /// </summary>
-
 
         /// <summary>
         /// Gets or sets the list of process names on which 
@@ -34,13 +27,9 @@ namespace Provider
             set { this._desc = value; }
         }
 
-        #endregion Parameters
-
         protected override void ProcessRecord()
         {
-            var item = new HuddleResourceObject();
-            item.Title = Title;
-            item.Description = Desc;
+            var item = new HuddleResourceObject {Title = Title, Description = Desc};
 
             WriteObject(item);
 

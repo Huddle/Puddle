@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Xml.Linq;
-using Provider.Entity.Builder;
-using Provider.Entity.Entities;
-using Provider.Resource;
+using System.Web.UI.WebControls;
+using DynamicRest.Xml;
+using PsHuddle.Entity.Builder;
+using PsHuddle.Entity.Entities;
 
-namespace Provider.Entity
+namespace PsHuddle.Entity
 {
     public class ResponseItemFactory
     {
@@ -14,12 +14,15 @@ namespace Provider.Entity
 
             var entityType = GetEntityType(response);
 
+            var result = response.Result as XmlNode;
+
             //leave it be for now wont be a string for long
             var map = new Dictionary<dynamic, Func<HuddleResourceObject>>
                           {
                               {"document", ()=> DocumentBuilder.Build(response.Result)},
                               {"folder", ()=>   FolderBuilder.Build(response.Result)},
-                              {"workspace", ()=> WorkSpaceBuilder.Build(response.Result)}
+                              {"workspace", ()=> WorkSpaceBuilder.Build(response.Result)},
+                              {"user", ()=> UserBuilder.Build(response.Result)}
                           };
 
             if(map.ContainsKey(entityType))
@@ -36,5 +39,4 @@ namespace Provider.Entity
             return rootElementName;
         }
     }
-
 }

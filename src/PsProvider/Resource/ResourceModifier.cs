@@ -8,8 +8,8 @@ using System.Xml.Serialization;
 using DynamicRest;
 using DynamicRest.Fluent;
 using Newtonsoft.Json;
-using Provider.Entity.Builder;
-using Provider.Entity.Entities;
+using PsHuddle.Entity.Builder;
+using PsHuddle.Entity.Entities;
 using Token.OAuth2;
 
 namespace Provider.Resource

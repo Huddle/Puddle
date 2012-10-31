@@ -2,8 +2,6 @@
 using System.IO;
 using DynamicRest;
 using Machine.Specifications;
-using Provider.Entity.Builder;
-using Provider.Entity.Entities;
 using System.Linq;
 using Puddle.Requests.HttpRequests;
 

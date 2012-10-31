@@ -1,6 +1,7 @@
 ﻿using System.IO;
+using System.Linq;
 
-namespace Provider.Entity.Entities
+namespace PsHuddle.Entity.Entities
 {
     public class Workspace : HuddleResourceObject
     {
@@ -11,13 +12,7 @@ namespace Provider.Entity.Entities
             Type = type;
         }
 
-        public Workspace()
-        {
-            
-        }
-
         public string Type { get; private set; }
-
         public FileAttributes Mode
         {
             get { return WorkoutMode(); }
@@ -26,6 +21,11 @@ namespace Provider.Entity.Entities
         private FileAttributes WorkoutMode()
         {
             return FileAttributes.Directory;
+        }
+
+        public string LinkDocumentLibrary
+        {
+            get { return Links == null ? string.Empty : Links.SingleOrDefault(l => l.Rel == "documentLibrary").Href; }
         }
     }
 

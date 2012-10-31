@@ -1,12 +1,13 @@
 ﻿using System.Management.Automation;
+using Provider.NavigationProviderParams;
 
-namespace Provider.NavigationProviderParams
+namespace PsHuddle.NavigationProviderParams
 {
-    public class HuddleDocumentLibraryInfo : PSDriveInfo
+    public class HuddleDriveInfo : PSDriveInfo
     {
         private static  DocumentLibraryParameters _driveParams;
 
-        public HuddleDocumentLibraryInfo(PSDriveInfo driveInfo, DocumentLibraryParameters driveParams)
+        public HuddleDriveInfo(PSDriveInfo driveInfo, DocumentLibraryParameters driveParams)
             : base(driveInfo)
         {
             _driveParams = driveParams;

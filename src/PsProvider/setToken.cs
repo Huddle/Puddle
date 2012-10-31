@@ -5,7 +5,6 @@ using System.Text;
 using Newtonsoft.Json;
 using Token;
 using Token.OAuth2;
-using Token.Properties;
 using TokenTest.oAuth2;
 
 

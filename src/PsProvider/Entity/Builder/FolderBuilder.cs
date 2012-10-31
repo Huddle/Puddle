@@ -1,7 +1,6 @@
-﻿using System.Xml;
-using Provider.Entity.Entities;
+﻿using PsHuddle.Entity.Entities;
 
-namespace Provider.Entity.Builder
+namespace PsHuddle.Entity.Builder
 {
     class FolderBuilder
     {
@@ -9,24 +8,25 @@ namespace Provider.Entity.Builder
         {
             Links links = LinkBuilder.Build(response);
 
-            try
-            {
-                return new Folder(response.description, response.created,
+            //try
+            //{
+            
+                return new Folder(string.Empty, response.created,
                                   response.updated, response.title, links);
-            }
-            catch (XmlException ex)
-            {
-                try
-                //sometimes its just that the folder doesn't have a description so lets try that else there can be no redemption
-                {
-                    return new Folder("", response.created,
-                                        response.updated, response.title, links);
-                }
-                catch (XmlException e)
-                {
-                    return null;
-                }
-            }
+            //}
+            //catch (XmlException ex)
+            //{
+            //    try
+            //    //sometimes its just that the folder doesn't have a description so lets try that else there can be no redemption
+            //    {
+            //        return new Folder("", response.created,
+            //                            response.updated, response.title, links);
+            //    }
+            //    catch (XmlException e)
+            //    {
+            //        return null;
+            //    }
+            //}
         }
     }
 }

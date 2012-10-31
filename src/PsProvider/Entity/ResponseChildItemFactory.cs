@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Xml;
-using System.Xml.Linq;
-using Provider.Entity.Builder;
-using Provider.Entity.Entities;
-using Provider.Resource;
+using PsHuddle.Entity.Builder;
+using PsHuddle.Entity.Entities;
 
-namespace Provider.Entity
+namespace PsHuddle.Entity
 {
     public class ResponseChildItemFactory
     {
@@ -33,13 +29,14 @@ namespace Provider.Entity
 
             try
             {
-                if (response.Result.membership.workspaces.Count == 1)
+                dynamic workspaceResponse = response.Result.membership.workspaces;
+                if (workspaceResponse.Count == 1)
                 {
-                    workspaces.Add(WorkSpaceBuilder.Build(response.Result.membership.workspaces.workspace));
+                    workspaces.Add(WorkSpaceBuilder.Build(workspaceResponse.workspace));
                 }
                 else
                 {
-                    foreach (dynamic ws in response.Result.membership.workspaces.workspace)
+                    foreach (dynamic ws in workspaceResponse.workspace)
                     {
                         workspaces.Add(WorkSpaceBuilder.Build(ws));
                     }                

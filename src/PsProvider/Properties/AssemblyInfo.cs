@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Provider")]
+[assembly: AssemblyTitle("PSHuddle")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Huddle")]
-[assembly: AssemblyProduct("Provider")]
+[assembly: AssemblyProduct("PSHuddle")]
 [assembly: AssemblyCopyright("Copyright © Huddle 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

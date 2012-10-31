@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace Provider.Entity.Entities
+namespace PsHuddle.Entity.Entities
 {
     public class Document : HuddleResourceObject
     {
@@ -15,11 +15,6 @@ namespace Provider.Entity.Entities
             Updated = updated;
             Created = created;
             Description = description;
-        }
-
-        public Document()
-        {
-            
         }
 
         public DateTime Created { get; private set; }

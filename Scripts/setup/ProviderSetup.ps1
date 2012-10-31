@@ -16,10 +16,10 @@ if(!(Test-Path $path\Modules\PsHuddle))
 
 $currentpath = Split-Path $MyInvocation.MyCommand.Path
 
-copy-Item  "$currentpath\Provider\*" $path\Modules\PsHuddle\ 
+copy-Item  "$currentpath\PsHuddle\*" $path\Modules\PsHuddle\ 
 
 #now its time to register that blasted .dll
-Invoke-Expression "$(Get-FrameworkDirectory)installutil $path\Modules\PSHuddle\Provider.dll"
+Invoke-Expression "$(Get-FrameworkDirectory)installutil $path\Modules\PSHuddle\PSHuddle.dll"
 
 #finally check if they are on .net 4
 if([System.Environment]::Version.Major -lt 4)

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Provider.Entity.Entities;
+﻿using PsHuddle.Entity.Entities;
 
-namespace Provider.Entity.Builder
+namespace PsHuddle.Entity.Builder
 {
     class DocumentBuilder
     {

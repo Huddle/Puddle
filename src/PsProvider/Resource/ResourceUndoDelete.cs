@@ -6,7 +6,7 @@ using System.Web.Caching;
 using System.Xml.Serialization;
 using DynamicRest;
 using DynamicRest.Fluent;
-using Provider.Entity.Entities;
+using PsHuddle.Entity.Entities;
 using Token.OAuth2;
 using TokenTest.oAuth2;
 
