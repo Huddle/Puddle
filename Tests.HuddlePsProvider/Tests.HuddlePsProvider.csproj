@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="When_checking_valid_path.cs" />
     <Compile Include="PowershellHostedContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="When_executing_a_powershell_command.cs" />

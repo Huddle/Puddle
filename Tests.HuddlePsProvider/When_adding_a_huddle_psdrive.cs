@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Management.Automation;
 using Huddle.Ps.Provider;
@@ -17,15 +16,13 @@ namespace Tests.HuddlePsProvider
     }
     public class When_adding_and_removing_huddle_psdrive : PowershellHostedContext
     {
-        private const string host = "api.huddle.com";
-        Establish context = () => Execute<ProviderInfo>("new-psdrive -psprovider Huddle.Ps.Provider -name huddle -root '' -Scope Global -Host {0}");
         Because we_create_the_version_file = () => Execute<ProviderInfo>("remove-psdrive -psprovider Huddle.Ps.Provider -name huddle");
-        It should_remove_the_huddle_provider = () => Execute<ProviderInfo>("get-psprovider").Any(pi => pi.Name == "Huddle.Ps.Provider").ShouldBeTrue();
+        It should_remove_the_huddle_provider = () => Execute<PSDriveInfo>("get-psdrive").Any(pi => pi.Name == "huddle").ShouldBeFalse();
     }
     public class When_adding_a_huddle_psdrive_With_parameters : PowershellHostedContext
     {
         private const string host = "api.huddle.com";
-        Establish context = () => { };
+        Establish context = () => Execute<ProviderInfo>("remove-psdrive -psprovider Huddle.Ps.Provider -name huddle");
         Because we_create_the_version_file = () => Execute<ProviderInfo>(string.Format("new-psdrive -psprovider Huddle.Ps.Provider -name huddle -root '' -Scope Global -Host {0}", host));
         private It should_create_a_huddle_drive_with_expected_host = () =>
                                                       {
@@ -41,5 +38,15 @@ namespace Tests.HuddlePsProvider
         Establish context = () => { };
         Because we_cfreate_a_ps_driove_without_a_host = () => exception = Catch.Exception( () => Execute<ProviderInfo>(string.Format("new-psdrive -psprovider Huddle.Ps.Provider -name huddle -root '' -Scope Global")));
         It should_raise_parm_binding_exception = () => exception.ShouldBeOfType<ParameterBindingException>();
+    }
+    public class When_retrieving_drives : PowershellHostedContext
+    {
+        private static Exception exception;
+        private It should_create_a_huddle_drive_by_default = () =>
+                                                                 {
+                                                                     var drives = Execute<PSDriveInfo>("get-psdrive");
+                                                                     drives.Any(psd => psd.Name == "huddle").
+                                                                         ShouldBeTrue();
+                                                                 };
     }
 }

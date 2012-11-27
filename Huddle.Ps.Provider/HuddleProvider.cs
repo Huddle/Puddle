@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Management.Automation;
 using System.Management.Automation.Provider;
 
@@ -7,9 +8,12 @@ namespace Huddle.Ps.Provider
     [CmdletProvider("Huddle.Ps.Provider", ProviderCapabilities.ShouldProcess | ProviderCapabilities.Filter)]
     public class HuddleProvider : ItemCmdletProvider
     {
+        private string DEFAULT_HOST = "api.huddle.dev";
+        private string DEFAULT_DRIVE_NAME = "huddle";
+
         protected override PSDriveInfo NewDrive(PSDriveInfo drive)
         {
-            //if (drive is HuddlePSDriveInfo) return drive;
+            if (drive is HuddlePSDriveInfo) return drive;
             //if (drive == null)
             //{
             //    WriteError(new ErrorRecord(new ArgumentNullException("drive"), "NullDrive", ErrorCategory.InvalidArgument, null));
@@ -31,6 +35,13 @@ namespace Huddle.Ps.Provider
         {
             return new HuddleDriveParameters();
         }
+        protected override Collection<PSDriveInfo> InitializeDefaultDrives()
+        {
+            var driveInfo = new PSDriveInfo(DEFAULT_DRIVE_NAME, ProviderInfo, "", "Huddle PS Provider", null);
+            
+            return new Collection<PSDriveInfo>() { new HuddlePSDriveInfo(driveInfo, new HuddleDriveParameters{Host = DEFAULT_HOST}) };
+        }
+
         protected override PSDriveInfo RemoveDrive(PSDriveInfo drive)
         {
             if (drive == null)
