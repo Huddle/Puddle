@@ -44,8 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="When_checking_valid_path.cs" />
+    <Compile Include="PowershellHostedContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestDriveCmdLetMethods.cs" />
+    <Compile Include="When_executing_a_powershell_command.cs" />
+    <Compile Include="When_adding_a_huddle_psdrive.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
